@@ -1,11 +1,36 @@
-<div class="container">
-  <div class="credit-card">
-    <h2>Card Number</h2>
+<div>
+  <label
+    appTooltip="This is your credit card number"
+    #creditcardTooltip="tooltip"
+  >
+    Credit Card Number
+    <span
+      (mouseover)="creditcardTooltip.show()"
+      (mouseout)="creditcardTooltip.hide()"
+      >(?)</span
+    >
     <input
       name="credit-card"
       type="text"
       placeholder="Enter your 16-digit card number"
-      appCreditCard
+      credit-card
     />
-  </div>
+  </label>
+  <label
+    appTooltip="Enter the 3 digits behind your credit card"
+    #myTooltip="tooltip"
+  >
+    Enter your security code
+    <span (mouseover)="myTooltip.show()" (mouseout)="myTooltip.hide()">
+      (?)
+    </span>
+    <input type="text" />
+  </label>
+  <!-- <label tooltip="3 digits, back of your card" #myTooltip="tooltip">
+    Enter your security code
+    <span (mouseover)="myTooltip.show()" (mouseout)="myTooltip.hide()">
+      (?)
+    </span>
+    <input type="text" />
+  </label> -->
 </div>

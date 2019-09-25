@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[appCreditCard]',
+  selector: '[credit-card]',
 })
 export class CreditCardDirective {
   @HostBinding('style.border')
